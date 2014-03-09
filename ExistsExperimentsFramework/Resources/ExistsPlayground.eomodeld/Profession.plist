@@ -1,0 +1,13 @@
+{
+    attributes = (
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {columnName = NAME; name = name; prototypeName = varchar255; }
+    ); 
+    attributesUsedForLocking = (id, name); 
+    className = "your.app.model.Profession"; 
+    classProperties = (name); 
+    externalName = PROFESSION; 
+    fetchSpecificationDictionary = {}; 
+    name = Profession; 
+    primaryKeyAttributes = (id); 
+}

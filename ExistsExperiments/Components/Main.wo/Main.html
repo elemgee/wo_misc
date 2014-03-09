@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+	<head>
+		<title>Running Example (Exists Qualifier)</title>
+	</head>
+	<body>
+		<fieldset>
+			<legend><h1>Apple QualifierOperatorContains</h1></legend>
+
+			<h2>Companies with a chef</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAChef" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+	
+	
+			<h2>Companies with a computer scientist</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAComputerScientist" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+	
+	
+			<h2>Companies with both a chef and a computer scientist</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAChefAndComputerScientist" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+			
+		</fieldset>
+
+
+
+		<fieldset>
+			<legend><h1>Apple QualifierOperatorContains (In Memory)</h1></legend>
+
+			<h2>Companies with a chef</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAChefInMemory" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+	
+	
+			<h2>Companies with a computer scientist</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAComputerScientistInMemory" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+	
+	
+			<h2>Companies with both a chef and a computer scientist</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAChefAndComputerScientistInMemory" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+
+		</fieldset>
+
+
+
+		<fieldset>
+			<legend><h1>WOnder ERXExistsQualifier</h1></legend>
+
+			<h2>Companies with a chef</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAChefExists" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+	
+	
+			<h2>Companies with a computer scientist</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAComputerScientistExists" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+	
+	
+			<h2>Companies with both a chef and a computer scientist</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAChefAndComputerScientistExists" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+			
+		</fieldset>
+
+
+
+		<fieldset>
+			<legend><h1>WOnder ERXExistsQualifier (Converted to "IN")</h1></legend>
+
+			<h2>Companies with a chef</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAChefExistsConvertedToIn" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+	
+	
+			<h2>Companies with a computer scientist</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAComputerScientistExistsConvertedToIn" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+	
+	
+			<h2>Companies with both a chef and a computer scientist</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithAChefAndComputerScientistExistsConvertedToIn" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+			
+		</fieldset>
+
+
+		<fieldset>
+			<legend><h1>Bonus</h1></legend>
+
+			<h2>Companies with employee salaries between 20k and 40k</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithEmployeesMakingBetween20kAnd40k" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+
+			<h2>Companies with chef salaries between 20k and 40k</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithChefsMakingBetween20kAnd40k" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+			
+			<h2>Companies with employee salaries between 70k and 120k</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithEmployeesMakingBetween70kAnd120k" item = "$companyItem">
+					<li><wo:str value = "$companyItem.name" /></li>
+				</wo:repeat>
+			</ul>
+			
+			<h2>All chefs (to-one with EXISTS)</h2>
+			<ul>
+				<wo:repeat list = "$employeeChefs" item = "$employeeItem">
+					<li>
+						<wo:str value = "$employeeItem.firstName" /> 
+						<wo:str value = "$employeeItem.lastName" />
+						(<wo:str value = "$employeeItem.company.name" />)
+					</li>
+				</wo:repeat>
+			</ul>
+
+			<h2>All computer scientists (to-one with IN)</h2>
+			<ul>
+				<wo:repeat list = "$employeeComputerScientists" item = "$employeeItem">
+					<li>
+						<wo:str value = "$employeeItem.firstName" /> 
+						<wo:str value = "$employeeItem.lastName" />
+						(<wo:str value = "$employeeItem.company.name" />)
+					</li>
+				</wo:repeat>
+			</ul>
+			
+		</fieldset>
+	</body>
+</html>

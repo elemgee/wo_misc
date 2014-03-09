@@ -1,0 +1,45 @@
+{
+    attributes = (
+        {
+            allowsNull = N; 
+            columnName = "COMPANY_ID"; 
+            name = companyID; 
+            prototypeName = id; 
+        }, 
+        {columnName = "FIRST_NAME"; name = firstName; prototypeName = varchar255; }, 
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {columnName = "LAST_NAME"; name = lastName; prototypeName = varchar255; }, 
+        {
+            allowsNull = N; 
+            columnName = "PROFESSION_ID"; 
+            name = professionID; 
+            prototypeName = id; 
+        }, 
+        {columnName = salary; name = salary; prototypeName = intNumber; }
+    ); 
+    attributesUsedForLocking = (companyID, firstName, id, lastName, professionID, salary); 
+    className = "your.app.model.Employee"; 
+    classProperties = (company, firstName, lastName, profession, salary); 
+    externalName = EMPLOYEE; 
+    fetchSpecificationDictionary = {}; 
+    name = Employee; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = Company; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = companyID; }); 
+            name = company; 
+        }, 
+        {
+            destination = Profession; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = professionID; }); 
+            name = profession; 
+        }
+    ); 
+}

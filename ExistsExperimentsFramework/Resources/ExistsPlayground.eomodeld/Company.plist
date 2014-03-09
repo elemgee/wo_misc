@@ -1,0 +1,22 @@
+{
+    attributes = (
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {columnName = NAME; name = name; prototypeName = varchar255; }
+    ); 
+    attributesUsedForLocking = (id, name); 
+    className = "your.app.model.Company"; 
+    classProperties = (employees, name); 
+    externalName = COMPANY; 
+    fetchSpecificationDictionary = {}; 
+    name = Company; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = Employee; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = companyID; sourceAttribute = id; }); 
+            name = employees; 
+        }
+    ); 
+}

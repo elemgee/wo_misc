@@ -1,0 +1,22 @@
+{
+    EOModelVersion = "2.1"; 
+    adaptorName = JDBC; 
+    connectionDictionary = {URL = "jdbc:FrontBase://127.0.0.1/ExistsPlayground"; username = "_system"; }; 
+    entities = (
+        {className = "your.app.model.Company"; name = Company; }, 
+        {className = "your.app.model.Employee"; name = Employee; }, 
+        {className = "your.app.model.Profession"; name = Profession; }
+    ); 
+    userInfo = {
+        "_EntityModeler" = {
+            activeDatabaseConfigName = Default; 
+            databaseConfigs = {
+                Default = {
+                    adaptorName = JDBC; 
+                    connectionDictionary = {URL = "jdbc:FrontBase://127.0.0.1/ExistsPlayground"; username = "_system"; }; 
+                    prototypeEntityName = EOJDBCFrontBasePrototypes; 
+                }; 
+            }; 
+        }; 
+    }; 
+}

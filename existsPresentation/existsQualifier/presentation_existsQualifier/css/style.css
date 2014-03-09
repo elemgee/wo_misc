@@ -1,0 +1,109 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville|Racing+Sans+One|Satisfy);
+
+body {
+    font-size: 200%;
+/*    text-align: center; */
+    font-family: Libre Baskerville;
+
+    color: #EEE;
+    
+    background: #333333;
+    background: -webkit-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    background: -moz-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    background: -o-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    background: -ms-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    background: radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+div div.step {
+	width: 1024px;
+}
+
+p {
+    font-size: 125%;
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+em {
+    font-family: Satisfy;
+    font-size: 142%;
+}
+
+strong {
+    font-family: Racing Sans One;
+    font-size: 127%;
+    letter-spacing: -2px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    text-align: center; 
+}
+
+li {
+    font-size: 125%;
+    font-family: serif;
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    padding-left: 0.3em;
+    line-height: 1.8em;
+    list-style-type: circle;
+}
+
+a {
+    color: white;
+}
+
+#logo_left{
+    bottom: 10px;
+    left: 10px;
+    height: 50px;
+    width: 187px;
+    background:  url('../img/wowodc.png');
+}
+
+#logo_right{
+    bottom: 10px;
+    right: -10px;
+    height: 64px;
+    width: 197px;
+    background:  url('../img/html5.png');
+}
+
+#logo_right, #logo_left{
+    opacity: 0.3;
+    position: fixed;
+    
+    
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+#logo_right:hover, #logo_left:hover{
+    opacity: 1;
+}
+
+#ThreeD H1 {
+    font-family: Racing Sans One;
+    font-size: 300%;
+}
+
+#thequestion p {
+    font-family: Racing Sans One;
+}
+
+#step-41 img {
+	float: left;
+	margin-right: 1em;
+}
