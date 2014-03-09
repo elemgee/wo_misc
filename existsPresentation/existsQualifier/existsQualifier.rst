@@ -30,6 +30,10 @@ Why EOF is Cool:
 * Our query language works equally well against the Relational-DB or in Memory
  
 ----
+
+:data-scale: 5
+:data-rotate: 90
+:data-y: r6000
  
 The Problem:
 ============
@@ -54,6 +58,10 @@ To-Many relationships are *hard!*
 
 ----
  
+:data-scale: 1
+:data-rotate: 0
+:data-y: r3000
+
 The Problem:
 ============
  
@@ -75,6 +83,11 @@ To-One relationships can be *slow!*
 
 
 ----
+
+:data-scale: 0.15
+:data-y: r-275
+:data-x: r150
+:data-rotate: -90
  
 The Solution:
 =============
@@ -109,6 +122,9 @@ Simple Entity Model
 
 ----
 
+:data-rotate: -180
+:data-x: r-1200
+
 Sample data
 ===================
 
@@ -117,6 +133,10 @@ Sample data
 
 
 ----
+
+:data-rotate-y: -45
+:data-y: r-100
+:data-x: r-800
 
 Companies with a chef (java)
 =============================
@@ -155,6 +175,11 @@ Companies with a chef (sql) issues
 * You should avoid "distinct" if you can. It slows things down and smells like you are doing something wrong. 
 
 ----
+
+:data-rotate-y: 45
+:data-y: 15924
+:data-x: r-800
+
 
 Companies with a chef and a coder (java)
 =========================================
@@ -231,6 +256,11 @@ Companies with a chef and a coder (In Memory) issues
 
 ----
 
+:data-scale: 1
+:data-x: r-1000
+:data-rotate: 0
+:data-y: r-1000
+
 Never Forget
 ============
 
@@ -244,8 +274,26 @@ Never Forget
 
 * 11th commandment - thou shalt not use *OperatorContains*
 
+----
+
+Never Forget (addendum)
+=======================
+
+* *OperatorContains* should not mean to do a "LIKE" comparison on character data
+
+* Some custom WO database plugins get this wrong, notably FrontBase
+
+* Modern Frontbase plugins can work with a property:
+
+::
+
+	jdbcadaptor.frontbase.frontbaseContainsOperatorFix=true
+
 
 ----
+
+:data-rotate: 90
+:data-x: r-5000
 
 Chef and a coder (*Exists*)
 ==============================================
@@ -343,6 +391,10 @@ Chef and a coder (*Exists* converted to "IN" sql)
 	)
 
 ----
+
+:data-rotate: 180
+:data-x: r-4000
+:data-y: r0
 
 Which is better *Exists* or *In*
 ================================
@@ -444,6 +496,8 @@ Is executed like:
 This does a full table scan of exists0 (EMPLOYEE) as the subquery is evaluated, distinct'ed, indexed and then joined to the original table. 
 
 ----
+
+:hovercraft-path: m275,175 a150,150 0 0,1 -150,150
 
 For Dave Avendasora
 ===================
@@ -561,6 +615,8 @@ Good to Know:
 
 ----
 
+:hovercraft-path: m775,675 a800,800 0 0,1 -800,800
+
 Mantra:
 ===================
 
@@ -590,6 +646,9 @@ It might just be for the really tricky part of your business logic that you use 
 
 ----
 
+:data-x: r-4000
+:hovercraft-path: m1075,975 a1000,1000 0 0,1 -1000,1000
+
 .. image:: img/you_broke_the_build.jpg
 
 This is Anges. She's not happy with you, Bub. 
@@ -601,11 +660,21 @@ you checked them in anyway.
 
 ----
 
+That's why we have version control
+==================================
+
+* A gentleman's club without topless dancers is not a gentleman's club. Let's stop acting like one.
+
+* We need to welcome new committers. 
+
+
+----
+
 Please take our pull request
 =============================
 
 * https://github.com/wocommunity/wonder/pull/541
 
-* A gentleman's club without topless dancers is not a gentleman's club. Let's stop acting like one.
+* https://github.com/recurve/wo_misc
 
-* We need to welcome new committers. 
+* http://www.chatnbike.com/presentation_existsQualifier
