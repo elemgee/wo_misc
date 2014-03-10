@@ -53,7 +53,7 @@ To-Many relationships are *hard!*
 	
 * Multiple to-many relationships in your combined qualifiers can cancel each other out.
 	
-* brining all objects into Java memory to perform your qualifier outside of SQL can work but it costs both RAM and speed.
+* bringing all objects into Java memory to perform your qualifier outside of SQL can work but it costs both RAM and speed.
  
 
 ----
@@ -660,6 +660,11 @@ you checked them in anyway.
 
 ----
 
+.. image:: img/screw_the_pooch.jpg
+	:height: 600px
+
+----
+
 That's why we have version control
 ==================================
 
@@ -678,3 +683,5 @@ Please take our pull request
 * https://github.com/recurve/wo_misc
 
 * http://www.chatnbike.com/presentation_existsQualifier
+
+* http://www.chatnbike.com/presentation_existsQualifier/exists_app_example_screen/
