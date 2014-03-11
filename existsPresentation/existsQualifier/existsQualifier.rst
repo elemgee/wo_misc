@@ -3,8 +3,6 @@
 
 ----
 
-:hovercraft-path: m275,175 v-150 a150,150 0 0,0 -150,150 z
-
 Make "Exists" qualifiers work for you
 =====================================
 
@@ -17,6 +15,9 @@ aaron@chatnbike.com
 Codivus, Inc.
 
 ----
+
+:data-x: r1000
+:data-y: r-1000
 
 Why EOF is Cool:
 ================
@@ -31,10 +32,8 @@ Why EOF is Cool:
  
 ----
 
-:data-scale: 5
-:data-rotate: 90
-:data-y: r6000
- 
+:data-rotate: 70
+
 The Problem:
 ============
  
@@ -42,6 +41,8 @@ To-Many relationships are *hard!*
 ---------------------------------
 
 ----
+
+:data-rotate: 20
  
 The Problem:
 ============
@@ -57,10 +58,8 @@ To-Many relationships are *hard!*
  
 
 ----
- 
-:data-scale: 1
-:data-rotate: 0
-:data-y: r3000
+
+:data-rotate: 70
 
 The Problem:
 ============
@@ -71,7 +70,9 @@ To-One relationships can be *slow!*
 
 
 ----
- 
+
+:data-rotate: 20
+
 The Problem:
 ============
  
@@ -84,11 +85,8 @@ To-One relationships can be *slow!*
 
 ----
 
-:data-scale: 0.15
-:data-y: r-275
-:data-x: r150
-:data-rotate: -90
- 
+:data-rotate: 70
+
 The Solution:
 =============
  
@@ -101,6 +99,8 @@ Use ERXExistsQualifer
 
 ----
  
+:data-rotate: 20
+
 ERXExistsQualifier Improvements:
 ==================================
  
@@ -113,6 +113,8 @@ ERXExistsQualifier Improvements:
 
 ----
 
+:data-rotate: 70
+
 Simple Entity Model
 ===================
 
@@ -122,8 +124,7 @@ Simple Entity Model
 
 ----
 
-:data-rotate: -180
-:data-x: r-1200
+:data-rotate: 20
 
 Sample data
 ===================
@@ -134,9 +135,7 @@ Sample data
 
 ----
 
-:data-rotate-y: -45
-:data-y: r-100
-:data-x: r-800
+:data-rotate: 70
 
 Companies with a chef (java)
 =============================
@@ -152,6 +151,8 @@ Companies with a chef (java)
 
 ----
 
+:data-rotate: 20
+
 Companies with a chef (sql)
 =============================
 
@@ -165,6 +166,8 @@ Companies with a chef (sql)
 
 ----
 
+:data-rotate: 70
+
 Companies with a chef (sql) issues
 ==================================
 
@@ -176,10 +179,7 @@ Companies with a chef (sql) issues
 
 ----
 
-:data-rotate-y: 45
-:data-y: 15924
-:data-x: r-800
-
+:data-rotate: 20
 
 Companies with a chef and a coder (java)
 =========================================
@@ -202,6 +202,8 @@ Companies with a chef and a coder (java)
 
 ----
 
+:data-rotate: 70
+
 Companies with a chef and a coder (sql)
 =======================================
 
@@ -215,6 +217,8 @@ Companies with a chef and a coder (sql)
 
 ----
 
+:data-rotate: 20
+
 Companies with a chef and a coder (sql) issues
 ==============================================
 
@@ -224,6 +228,8 @@ Companies with a chef and a coder (sql) issues
 
 
 ----
+
+:data-rotate: 70
 
 Companies with a chef and a coder (In Memory)
 ==============================================
@@ -246,6 +252,8 @@ Companies with a chef and a coder (In Memory)
 
 ----
 
+:data-rotate: 20
+
 Companies with a chef and a coder (In Memory) issues
 ====================================================
 
@@ -256,10 +264,7 @@ Companies with a chef and a coder (In Memory) issues
 
 ----
 
-:data-scale: 1
-:data-x: r-1000
-:data-rotate: 0
-:data-y: r-1000
+:data-rotate: 70
 
 Never Forget
 ============
@@ -275,6 +280,8 @@ Never Forget
 * 11th commandment - thou shalt not use *OperatorContains*
 
 ----
+
+:data-rotate: 20
 
 Never Forget (addendum)
 =======================
@@ -292,8 +299,7 @@ Never Forget (addendum)
 
 ----
 
-:data-rotate: 90
-:data-x: r-5000
+:data-rotate: 70
 
 Chef and a coder (*Exists*)
 ==============================================
@@ -317,6 +323,8 @@ Chef and a coder (*Exists*)
 
 
 ----
+
+:data-rotate: 20
 
 Chef and a coder (*Exists* sql)
 ================================================
@@ -345,6 +353,8 @@ Chef and a coder (*Exists* sql)
 
 ----
 
+:data-rotate: 70
+
 Chef and a coder (*Exists* converted to "IN")
 ==============================================
 
@@ -370,6 +380,8 @@ Chef and a coder (*Exists* converted to "IN")
 
 ----
 
+:data-rotate: 20
+
 Chef and a coder (*Exists* converted to "IN" sql)
 =================================================
 
@@ -392,9 +404,7 @@ Chef and a coder (*Exists* converted to "IN" sql)
 
 ----
 
-:data-rotate: 180
-:data-x: r-4000
-:data-y: r0
+:data-rotate: 70
 
 Which is better *Exists* or *In*
 ================================
@@ -408,6 +418,8 @@ Which is better *Exists* or *In*
 
 ----
 
+:data-rotate: 20
+
 Which is better *Exists* or *In*
 ================================
 
@@ -416,6 +428,8 @@ Which is better *Exists* or *In*
 * When the outer result set is small, use an *Exists*
 
 ----
+
+:data-rotate: 70
 
 *Exists* explanation
 ======================
@@ -433,6 +447,8 @@ This SQL
 
 
 ----
+
+:data-rotate: 20
 
 *Exists* explanation
 ======================
@@ -461,6 +477,8 @@ It always results in a full scan of T0 (Company)
 
 ----
 
+:data-rotate: 70
+
 *In* explanation
 ======================
 
@@ -476,6 +494,8 @@ This SQL
 		WHERE exists0."PROFESSION_ID" = 1000002 )
 
 ----
+
+:data-rotate: 20
 
 *In* explanation
 ======================
@@ -497,7 +517,7 @@ This does a full table scan of exists0 (EMPLOYEE) as the subquery is evaluated, 
 
 ----
 
-:hovercraft-path: m275,175 a150,150 0 0,1 -150,150
+:data-rotate: 70
 
 For Dave Avendasora
 ===================
@@ -505,6 +525,8 @@ For Dave Avendasora
 An example with not only an EXISTS0 but also an EXISTS1	replacement. It happens when you have a complex subquery with one or more joins.
 
 ----
+
+:data-rotate: 20
 
 Companies with chef salary between 20k and 40k (java)
 ===============================================================
@@ -524,6 +546,8 @@ Companies with chef salary between 20k and 40k (java)
 
 
 ----
+
+:data-rotate: 70
 
 Companies with chef salary between 20k and 40k (SQL)
 ===============================================================
@@ -548,12 +572,16 @@ Companies with chef salary between 20k and 40k (SQL)
 
 ----
 
+:data-rotate: 20
+
 A to-one relationship example
 =============================
 
 9 times out of 10, regular joins will work just fine for to-one relationships. But, there are those odd times where the join is so painful that you will want to use an *Esists!* qualifier.
 
 ----
+
+:data-rotate: 70
 
 All employees that are chefs (java)
 ===============================================================
@@ -568,6 +596,8 @@ All employees that are chefs (java)
 		editingContext(), qualifier, null /*sortOrderings*/);
 
 ----
+
+:data-rotate: 20
 
 All employees that are chefs (SQL)
 ===============================================================
@@ -586,6 +616,8 @@ All employees that are chefs (SQL)
 
 ----
 
+:data-rotate: 70
+
 Real life example!
 ==================
 
@@ -593,18 +625,20 @@ Real life example!
 
 	// (Aaron Dec. 31, 2013)
 	// using a join is much slower than the "in" clause
-	// EOQualifier forQuestionQualifier = Answer.TO_FOR_QUESTION_ITEM
-	//   .dot(Item.TO_QUESTION).is(forQuestion);		
+	// EOQualifier forQuestionQualifier = Answer.PLACED_QUESTION
+	//   .dot(PlacedQuestion.QUESTION).is(forQuestion);		
 	
 	EOQualifier forQuestionQualifier = new ERXExistsQualifier(
-		Item.TO_QUESTION.is(forQuestion), 
-		Answer.TO_FOR_QUESTION_ITEM.key(), true /*usesInQualInstead*/);
+		PlacedQuestion.QUESTION.is(forQuestion), 
+		Answer.PLACED_QUESTION.key(), true /*usesInQualInstead*/);
 
 	* "Answer" table has 19,353,992 rows
-	* "Item" table has 27,202 rows
+	* "PlacedQuestion" table has 27,202 rows
 	* "Question" table has 2,307 rows
 
 ----
+
+:data-rotate: 20
 
 Good to Know:
 ===================
@@ -615,7 +649,7 @@ Good to Know:
 
 ----
 
-:hovercraft-path: m775,675 a800,800 0 0,1 -800,800
+:data-rotate: 70
 
 Mantra:
 ===================
@@ -625,6 +659,8 @@ When you think you're stuck...
 *Exists!* will dig you out.
 
 ----
+
+:data-rotate: 20
 
 Corollary:
 ===================
@@ -637,6 +673,8 @@ The Houdah frameworks are also quite good.
 
 ----
 
+:data-rotate: 70
+
 If it is too painful:
 =====================
 
@@ -644,36 +682,10 @@ Consider using a pure object Database.
 
 It might just be for the really tricky part of your business logic that you use an OODB. 
 
-----
-
-:data-x: r-4000
-:hovercraft-path: m1075,975 a1000,1000 0 0,1 -1000,1000
-
-.. image:: img/you_broke_the_build.jpg
-
-This is Anges. She's not happy with you, Bub. 
-
-You broke the build!
-
-You should have known that you were making breaking changes but 
-you checked them in anyway.
 
 ----
 
-.. image:: img/screw_the_pooch.jpg
-	:height: 600px
-
-----
-
-That's why we have version control
-==================================
-
-* A gentleman's club without topless dancers is not a gentleman's club. Let's stop acting like one.
-
-* We need to welcome new committers. 
-
-
-----
+:data-rotate: 20
 
 Please take our pull request
 =============================
