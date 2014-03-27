@@ -12,6 +12,8 @@ import com.webobjects.foundation.NSArray;
 import er.extensions.eof.qualifiers.ERXExistsQualifier;
 import er.extensions.foundation.ERXArrayUtilities;
 import er.extensions.qualifiers.ERXAndQualifier;
+import er.extensions.qualifiers.ERXNotQualifier;
+import er.extensions.qualifiers.ERXTrueQualifier;
 
 public class Main extends BaseComponent {
 	public Company companyItem = null;
@@ -163,6 +165,23 @@ public class Main extends BaseComponent {
 				Employee.PROFESSION.key() /*baseKeyPath*/,
 				true /*usesInQualInstead*/);
 		return Employee.fetchEmployees(editingContext(), qualifier, null /*sortOrderings*/);
+	}
+	
+	public NSArray<Company> companiesWithNoEmployees() {
+		EOQualifier qualifier = new ERXExistsQualifier(
+				new ERXTrueQualifier() /*subqualifier*/, 
+				Company.EMPLOYEES.key() /*baseKeyPath*/,
+				false /*usesInQualInstead*/);
+		EOQualifier notQualifier = new ERXNotQualifier(qualifier);
+		return Company.fetchCompanies(editingContext(), notQualifier, null /*sortOrderings*/);
+	}
+
+	public NSArray<Company> companiesWithEmployees() {
+		EOQualifier qualifier = new ERXExistsQualifier(
+				new ERXTrueQualifier() /*subqualifier*/, 
+				Company.EMPLOYEES.key() /*baseKeyPath*/,
+				false /*usesInQualInstead*/);
+		return Company.fetchCompanies(editingContext(), qualifier, null /*sortOrderings*/);
 	}
 
 	@Override

@@ -80,7 +80,7 @@ To-One relationships can be *slow!*
 -----------------------------------
 (sometimes)
 
-* When the tables involved in the join have lots of rows, an exists Qualifier can perform faster than an join
+* When the tables involved in the join have lots of rows, an exists Qualifier can perform faster than a join
 
 
 ----
@@ -131,6 +131,7 @@ Sample data
 
 * "Joe's Crab Shack" has one chef, a manager, and a waiter
 * "Code Mongers" has three computer scientists and one famous chef
+* "Nobody Inc." has no employees
 
 
 ----
@@ -635,6 +636,94 @@ Real life example!
 	* "Answer" table has 19,353,992 rows
 	* "PlacedQuestion" table has 27,202 rows
 	* "Question" table has 2,307 rows
+
+----
+
+:data-rotate: 20
+
+All companies with at least one employee (java)
+================================================
+
+How would you write this?
+
+----
+
+:data-rotate: 70
+
+All companies with at least one employee (java)
+================================================
+
+How would you write this?
+
+Normally it would be impossible.
+
+"isNotNull" qualifiers don't work for to-Many relationships.
+
+----
+
+:data-rotate: 20
+
+All companies with at least one employee (java)
+================================================
+
+.. code:: java
+
+	EOQualifier qualifier = new ERXExistsQualifier(
+			new ERXTrueQualifier() /*subqualifier*/, 
+			Company.EMPLOYEES.key() /*baseKeyPath*/,
+			false /*usesInQualInstead*/);
+			
+	return Company.fetchCompanies(
+		editingContext(), qualifier, null /*sortOrderings*/);
+		
+----
+
+:data-rotate: 70
+
+All companies with at least one employee (SQL)
+================================================
+
+.. code:: sql
+
+	SELECT t0."id", t0."NAME" FROM "COMPANY" t0 
+	WHERE  EXISTS ( 
+		SELECT exists0."id" 
+		FROM "EMPLOYEE" exists0 
+		WHERE 1=1 AND 
+			exists0."COMPANY_ID" = t0."id" )
+
+----
+
+:data-rotate: 20
+
+All companies with no employees (java)
+================================================
+
+.. code:: java
+
+	EOQualifier qualifier = new ERXExistsQualifier(
+			new ERXTrueQualifier() /*subqualifier*/, 
+			Company.EMPLOYEES.key() /*baseKeyPath*/,
+			false /*usesInQualInstead*/);
+	EOQualifier notQualifier = new ERXNotQualifier(qualifier);
+	return Company.fetchCompanies(
+		editingContext(), notQualifier, null /*sortOrderings*/);
+		
+----
+
+:data-rotate: 70
+
+All companies with no employees (SQL)
+================================================
+
+.. code:: sql
+
+	SELECT t0."id", t0."NAME" FROM "COMPANY" t0 
+	WHERE not ( EXISTS ( 
+		SELECT exists0."id" 
+		FROM "EMPLOYEE" exists0 
+		WHERE 1=1 AND 
+			exists0."COMPANY_ID" = t0."id" ) )
 
 ----
 

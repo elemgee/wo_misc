@@ -169,6 +169,24 @@
 				</wo:repeat>
 			</ul>
 			
+			<h2>All companies with at least one employee</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithEmployees" item = "$companyItem">
+					<li>
+						<wo:str value = "$companyItem.name" />
+					</li>
+				</wo:repeat>
+			</ul>
+			
+			<h2>All companies with no employees</h2>
+			<ul>
+				<wo:repeat list = "$companiesWithNoEmployees" item = "$companyItem">
+					<li>
+						<wo:str value = "$companyItem.name" />
+					</li>
+				</wo:repeat>
+			</ul>
+
 		</fieldset>
 	</body>
 </html>
